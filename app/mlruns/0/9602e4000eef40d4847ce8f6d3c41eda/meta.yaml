@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/TFG5076XG/mlfapi/mlruns/0/9602e4000eef40d4847ce8f6d3c41eda/artifacts
+end_time: 1644491631106
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 9602e4000eef40d4847ce8f6d3c41eda
+run_uuid: 9602e4000eef40d4847ce8f6d3c41eda
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1644491628903
+status: 3
+tags: []
+user_id: TFG5076XG
