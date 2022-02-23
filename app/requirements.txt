@@ -1,0 +1,6 @@
+fastapi==0.63.0
+google-cloud-storage==2.1.0
+mlflow==1.23.1
+pickle5==0.0.12
+pydantic==1.7.3
+uvicorn==0.13.3
