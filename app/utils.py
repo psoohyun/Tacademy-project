@@ -78,9 +78,9 @@ def get_model_list_from_gcp():
     :return(return type): gcp 내의 학습된 모델 리스트(리스트)
     """
     
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/TFG5076XG/practice/cloud_practice/chromatic-hue-341712-06f40be9bd11.json"
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/TFG5076XG/mlfapi_practice/app/compute-engine-342100-5747b11244f0.json"
 
-    bucket_name = 'hjh_bucket'
+    bucket_name = 'alzal_bucket'
     client = storage.Client()
     blobs = client.list_blobs(bucket_name)
 
@@ -105,16 +105,27 @@ def get_pkl_from_gcp(model: str):
     :return(return type): 학습된 모델(model)
     """
 
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/TFG5076XG/practice/cloud_practice/chromatic-hue-341712-06f40be9bd11.json"
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/TFG5076XG/mlfapi_practice/app/compute-engine-342100-5747b11244f0.json"
 
-    bucket_name = 'hjh_bucket'
+    bucket_name = 'alzal_bucket'
     client = storage.Client()
     bucket = client.bucket(bucket_name)
-    source_path = f'titanic/1/{model}/artifacts/ml_model/model.pkl'
-    blobs = bucket.blob(source_path)
+    try:
+        source_path = f'titanic/1/{model}/artifacts/ml_model/model.pkl'
+        blobs = bucket.blob(source_path)
+    except:
+        source_path = f'titanic/2/{model}/artifacts/ml_model/model.pkl'
+        blobs = bucket.blob(source_path)
 
     model_bytes = blobs.download_as_bytes(raw_download=True)
 
     ai_model = pickle.loads(model_bytes, encoding="bytes")
 
     return ai_model
+
+
+# print(get_pkl_from_gcp('241b7d1d60854ff1b49149cbbf82e2fe').predict([[1,1,1]]).tolist())
+
+if __name__ == "__main":
+    # print(get_pkl_from_gcp('241b7d1d60854ff1b49149cbbf82e2fe').predict([[1,1,1]]).tolist())
+    a = get

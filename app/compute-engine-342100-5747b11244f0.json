@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "compute-engine-342100",
+  "private_key_id": "5747b11244f0a40c584393b62edaec0ec29d5af2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC8ktolfu+3gwlC\nZ5xGumgSLnx0zNtKvj/3sSjwIRrNwDP4tvehEKKgBzDEiIPSBsxqRdfR0wUk1IQr\nXq59co2u9XmsJL9nxlAbKiuSmj6/N58RlNQhEd3Vc8v74VcVAXrPL5+XpmDcpynl\nXaOWvO+jqbT2Tn3R2EMx2Q2sMCJp33zUOPLW1q05SaO28kI8z6WE9uw2Eg0qSjnJ\n6zODU1wXKd417Jr49BQHpnC4+cO4D7j1alL50fl1UTB6OQL5tAX4SKPxHFobIvwx\nOL2ok9BNqgeqp4+Jd0SPPLRKysyDVeR/CInEjR7eTknEjBaxYAcHdSDvl46JovFf\nDUjitUV1AgMBAAECggEAC05tGiHuqrdb2FmA1HnL5cktPk3jw8Bn8p3dPpaRi5lq\nVE+DcJVgLCL6O30UQEUW6l6hK8wQoHkbKpmHnJnAISfH4Y3Q1HP0F3OIv3EURt/w\nH5GnmAsA8hHPvsdaSAtkaw89LPkgEM13X4X6L2kedNbm9NIBzRGVJ87j47l9cBEI\ndTLKLpX4hYbO50nylb4Yjy8fMrA9Ol3dQmk+MCMo+BzUPvFH9JKE1mZn6fCrsKzy\nKcaIvtqavpcwwr3hhiKq9IUXKRKnrZ00FHpPy3ASGd95DqcUmPk0TzJDaiLhyELY\n4qpt/tCPe3Q56671OEgwlHcKSQQm8Ki3wP/1t623wQKBgQD8WR62HadX9kbDovil\n1e7AxIU5qtmK/mw6hnuWn9lGB0BoltXmEmKA70FUVctm6O+qzOQh8gZHF9jCyOLv\nuGH8WxVAegXDu54IQo2p3k71Ui6VtIKlx+vD5Asv5x0WB62RuyL3zp/6/xSrUaJ+\nMlFETIuO5hr4s9XwRf/ZNyXwNQKBgQC/TXcgayW8+umc17zVpouHJACub3thECJz\nRuZNtmMQrMtljiMebk3bgOabnk3nGsbasSQUi69ApQURrcEvg0LXR3jC2ZGHs82z\nlG6nrgZG0y6uhrPFGbXwpUrrE79wVxQTn6A6x6wA9M2b6fcMyf8YguA6Fjo9GlKO\nSkDwab8oQQKBgQDzr0AYD6TFLb8CN0O0KVYo8t3QZWs0bSKolauNNgnENUZ+eYJP\nbduPtPu6bCtC0ph2sOtw2F41kxKwbvuvELgW0QJBxFQCwxAF2/cfXd2Ty2vPB4TO\ngLPs9C/Vb3JIDtwPCc7nzLHy2Rblpayr/v05Xk26jfznxApJv98krLvHLQKBgQCL\nGKRZqg7Sjg52wFbJckNZi9ADBYRMWxLxhsfGEauOYFW0DdlzMvjhdaQ32q8CLvIP\n6WU2mypecp5w8EnbZjGfnpQr+U5bwVz8Ch07RsnBjaQPulnUIpGr3EPREZbM9EPg\n0NwMYUqrl1Q43bGIVwdopyCqm6bU7uLAGzWEmR8pAQKBgHd1NzYBxy/4JhCdUIzu\n9DyqhLoDUYDD3BV9nuUWbREjFgfNUpT84ycC/Q+lX3aVWxxqIEyXWPZZQoxSOUGq\nMYlASMm+FMKV4mLOlIRrVnmPz3DZ1FTQxQGn9kSePLRcmjLWGPktYQXnE1UOBor3\n9vuPr0O9GK2qEO4tOpQtS6JF\n-----END PRIVATE KEY-----\n",
+  "client_email": "alzal-535@compute-engine-342100.iam.gserviceaccount.com",
+  "client_id": "104496014198390604100",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/alzal-535%40compute-engine-342100.iam.gserviceaccount.com"
+}
