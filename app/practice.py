@@ -152,18 +152,67 @@ import pickle, numpy as np
 # data = {"Sex": [1, 0, 1, 1], "Age_band": [1, 2, 1, 1], "Pclass": [1, 3, 3, 3]}
 # a = Predict("330ded0fb7ba462a881357ab456591f5").loaded_model(data)
 # print(a)
-model = '08ebe951121040549f5556946e4f23df'
+# model = '08ebe951121040549f5556946e4f23df'
 
-path = f"./mlruns/0/{model}/artifacts/ml_model/model.pkl"
+# path = f"./mlruns/0/{model}/artifacts/ml_model/model.pkl"
 
-with open(path,'rb') as f:
-    ai_model = pickle.load(f)
+# with open(path,'rb') as f:
+#     ai_model = pickle.load(f)
 
-a = ai_model.predict([[1,1,1]]).tolist()
+# a = ai_model.predict([[1,1,1]]).tolist()
 
-print('답은 :',a)
+# print('답은 :',a)
 
-x = [1]
-y = [2]
-z = [3]
-print(x+y)
+# x = [1]
+# y = [2]
+# z = [3]
+# print(x+y)
+
+import psycopg2
+
+# db = psycopg2.connect(host = '34.64.203.39',
+# dbname = 'titanic_db', user='postgres', password='mlflow', port=5432)
+# cursor=db.cursor()
+
+# class Databases():
+#     def __init__(self):
+#         self.db = psycopg2.connect(host = '34.64.203.39', dbname = 'titanic_db', user='postgres', password='mlflow', port=5432)
+#         self.cursor = self.db.cursor()
+
+#     def __del__(self):
+#         self.db.close()
+#         self.cursor.close()
+
+#     def readDB(self,schema,table,colum):
+#         sql = " SELECT {colum} from {schema}.{table}".format(colum=colum,schema=schema,table=table)
+#         try:
+#             self.cursor.execute(sql)
+#             result = self.cursor.fetchall()
+#         except Exception as e :
+#             result = (" read DB err",e)
+        
+#         return result
+
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+SQLARCHEMY_DATABASE_URL = "postgresql://postgres:mlflow@34.64.203.39/titanic_db"
+
+engine = create_engine( SQLARCHEMY_DATABASE_URL )
+
+SessionLocal = sessionmaker(autocommit = False, autoflush = False, bind = engine)
+
+# Base = declarative_base()
+
+# result = engine.execute("select * from titanic_db")
+    
+# print(result)
+
+import pandas as pd
+
+pd.read_sql("select * from titanic_db", engine)
+
+# if __name__ == "__main__":
+#     a = Databases()
+#     b = a.readDB()

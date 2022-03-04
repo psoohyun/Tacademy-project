@@ -43,7 +43,9 @@ class FibonacciRpcClient:
 
 
 class NLPpredicting:
-
+"""
+rpc로 원격 인스턴스에 작업을 할당하는 코드와 원격 인스턴스에서 처리한 결과를 리턴받는 클래스
+"""
     def __init__(self):
         self.connection = pika.BlockingConnection(
             pika.ConnectionParameters(host='localhost')
@@ -60,12 +62,16 @@ class NLPpredicting:
         )
     
     def on_response(self, ch, method, props, body):
+        """
+        요청에 대해 받아야할 응답
+        """
         if self.corr_id == props.correlation_id:
             self.response = body
 
     def call(self, n: str):
         self.response = None
         self.corr_id = str(uuid.uuid4())
+        print(self.corr_id)
         self.channel.basic_publish(
             exchange='',
             routing_key='rpc_queue',

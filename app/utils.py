@@ -86,11 +86,18 @@ def get_model_list_from_gcp():
 
     model_list=[]
 
+    # for i in blobs:
+    #     # print(i.name)
+    #     try:
+    #         if (len(i.name.split('/')[2])>=20)&(i.name.split('/')[2] not in model_list):
+    #             model_list.append(i.name.split('/')[2])
+    #     except: pass
+
     for i in blobs:
-        # print(i.name)
         try:
-            if (len(i.name.split('/')[2])>=20)&(i.name.split('/')[2] not in model_list):
-                model_list.append(i.name.split('/')[2])
+            if (len(i.name.split('/')) == 8) & (i.name.split('/')[4] not in model_list):
+                print(i.name.split('/')[4])
+                model_list.append(i.name.split('/')[4])
         except: pass
 
     return model_list
@@ -128,4 +135,3 @@ def get_pkl_from_gcp(model: str):
 
 if __name__ == "__main":
     # print(get_pkl_from_gcp('241b7d1d60854ff1b49149cbbf82e2fe').predict([[1,1,1]]).tolist())
-    a = get
